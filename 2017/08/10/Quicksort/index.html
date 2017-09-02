@@ -78,6 +78,8 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="C/C++," />
+
 
 
 
@@ -94,13 +96,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sunshinehit">
-<meta property="og:url" content="http://sunyueqing.com/index.html">
+<meta name="description" content="快排基本思想设当前待排序的无序区为 R[low..high]，利用分治法可将快速排序的基本思想描述为： 1.分解：在 R[low..high]中任选一个记录作为基准(Pivot)，以此基准将当前无序区划分为左、右两个较小的子区间 R[low..pivotpos-1)和 R[pivotpos+1..high]，并使左边子区间中所有记录的关键字均小于等于基准记录(不妨记为 pivot)的关键字 piv">
+<meta name="keywords" content="C&#x2F;C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quicksort">
+<meta property="og:url" content="http://sunyueqing.com/2017/08/10/Quicksort/index.html">
 <meta property="og:site_name" content="Sunshinehit">
+<meta property="og:description" content="快排基本思想设当前待排序的无序区为 R[low..high]，利用分治法可将快速排序的基本思想描述为： 1.分解：在 R[low..high]中任选一个记录作为基准(Pivot)，以此基准将当前无序区划分为左、右两个较小的子区间 R[low..pivotpos-1)和 R[pivotpos+1..high]，并使左边子区间中所有记录的关键字均小于等于基准记录(不妨记为 pivot)的关键字 piv">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-02T07:11:42.338Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sunshinehit">
+<meta name="twitter:title" content="Quicksort">
+<meta name="twitter:description" content="快排基本思想设当前待排序的无序区为 R[low..high]，利用分治法可将快速排序的基本思想描述为： 1.分解：在 R[low..high]中任选一个记录作为基准(Pivot)，以此基准将当前无序区划分为左、右两个较小的子区间 R[low..pivotpos-1)和 R[pivotpos+1..high]，并使左边子区间中所有记录的关键字均小于等于基准记录(不妨记为 pivot)的关键字 piv">
 
 
 
@@ -129,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://sunyueqing.com/"/>
+  <link rel="canonical" href="http://sunyueqing.com/2017/08/10/Quicksort/"/>
 
 
 
 
 
-  <title>Sunshinehit</title>
+  <title>Quicksort | Sunshinehit</title>
   
 
 
@@ -164,9 +171,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-   page-home 
- ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,137 +264,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sunyueqing.com/2017/08/20/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SYQ">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/syq.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sunshinehit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/20/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-20T15:19:32+08:00">
-                2017-08-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -419,9 +296,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/10/Quicksort/" itemprop="url">Quicksort</a></h1>
+          <h1 class="post-title" itemprop="name headline">Quicksort</h1>
         
 
         <div class="post-meta">
@@ -493,9 +368,7 @@
       
 
       
-        
-          
-            <h1 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h1><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>设当前待排序的无序区为 R[low..high]，利用分治法可将快速排序的基本思想描述为：</p>
+        <h1 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h1><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>设当前待排序的无序区为 R[low..high]，利用分治法可将快速排序的基本思想描述为：</p>
 <h3 id="1-分解："><a href="#1-分解：" class="headerlink" title="1.分解："></a>1.分解：</h3><p>在 R[low..high]中任选一个记录作为基准(Pivot)，以此基准将当前无序区划分为左、右两个较小的子区间 R[low..pivotpos-1)和 R[pivotpos+1..high]，并使左边子区间中所有记录的关键字均小于等于基准记录(不妨记为 pivot)的关键字 pivot.key，右边的子区间中所有记录的关键字均大于等于 pivot.key，而基准记录 pivot 则位于正确的位置(pivotpos)上，它无须参加后续的排序。</p>
 <p>注意： 划分的关键是要求出基准记录所在的位置 pivotpos。划分的结果可以简单地表示为(注意 pivot=R[pivotpos])： R[low..pivotpos-1].keys≤R[pivotpos].key≤R[pivotpos+1..high].keys 其中 low≤pivotpos≤high。</p>
 <h3 id="2-求解："><a href="#2-求解：" class="headerlink" title="2.求解："></a>2.求解：</h3><p>通过递归调用快速排序对左、右子区间 R[low..pivotpos-1]和R[pivotpos+1..high]快速排序。</p>
@@ -514,8 +387,6 @@
 <h2 id="快速选择问题"><a href="#快速选择问题" class="headerlink" title="快速选择问题"></a>快速选择问题</h2><p>输入n个整数和一个正整数K(1&lt;=K&lt;=n)，输出这些整数从小到大排序后的第K个。n&lt;=107<br>【分析】<br>选择第K大的数，最容易想到的方法是先排序，然后直接输出下标是K-1的元素，但107的规模即使对于O(nlogn)的算法来说也较大。<br>假设在快速排序的“划分”结束后，数组A[p……r]被分成了A[p……q]和A[q+1……r]，则可以根据左边的元素个数q-p+1和k的大小关系只在左边或只在右边递归求解。<br>所以只在原快速排序的基础上增加if……else语句即可。<br>可以证明，在期望意义下，程序的时间复杂度为O（n）。</p>
 <p>代码如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> R[], <span class="keyword">int</span> low, <span class="keyword">int</span> high,<span class="keyword">int</span> k)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span>  <span class="title">Partition</span><span class="params">(<span class="keyword">int</span> R[], <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> n, k;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;k);</div><div class="line">    <span class="keyword">int</span> R[n];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;R[i]);</div><div class="line">    &#125;</div><div class="line">    QuickSort(R, <span class="number">0</span>, n - <span class="number">1</span>,k);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, R[i]);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, R[k<span class="number">-1</span>]);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> R[], <span class="keyword">int</span> low, <span class="keyword">int</span> high,<span class="keyword">int</span> k)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> pivotpos;</div><div class="line">    <span class="keyword">if</span> (low &lt; high) &#123;</div><div class="line">        pivotpos = Partition(R, low, high);</div><div class="line">        <span class="keyword">if</span>(k&lt;pivotpos)</div><div class="line">            QuickSort(R, low, pivotpos - <span class="number">1</span>,k);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            QuickSort(R, pivotpos + <span class="number">1</span>, high,k);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Partition</span><span class="params">(<span class="keyword">int</span> R[], <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> pivot = R[i];</div><div class="line">    <span class="keyword">while</span> (i &lt; j) &#123;</div><div class="line">        <span class="keyword">while</span> (i &lt; j &amp;&amp; R[j] &gt;= pivot)</div><div class="line">            j--;</div><div class="line">        <span class="keyword">if</span> (i &lt; j)</div><div class="line">            R[i++] = R[j];</div><div class="line">        <span class="keyword">while</span> (i &lt; j &amp;&amp; R[i] &lt;= pivot)</div><div class="line">            i++;</div><div class="line">        <span class="keyword">if</span> (i &lt; j)</div><div class="line">            R[j--] = R[i];</div><div class="line">    &#125;</div><div class="line">    R[i] = pivot;</div><div class="line">    <span class="keyword">return</span> i;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
-          
-        
       
     </div>
     
@@ -525,19 +396,65 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.png" alt="SYQ WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/C-C/" rel="tag"># C/C++</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/20/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -547,10 +464,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -558,6 +476,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -578,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/syq.jpg"
@@ -705,6 +636,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#快排"><span class="nav-number">1.</span> <span class="nav-text">快排</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本思想"><span class="nav-number">1.1.</span> <span class="nav-text">基本思想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-分解："><span class="nav-number">1.1.1.</span> <span class="nav-text">1.分解：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-求解："><span class="nav-number">1.1.2.</span> <span class="nav-text">2.求解：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-组合："><span class="nav-number">1.1.3.</span> <span class="nav-text">3.组合：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#划分算法-Partition"><span class="nav-number">1.2.</span> <span class="nav-text">划分算法 Partition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-具体做法"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 具体做法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-划分算法"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 划分算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速选择问题"><span class="nav-number">1.3.</span> <span class="nav-text">快速选择问题</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -835,10 +782,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
