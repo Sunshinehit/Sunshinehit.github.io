@@ -94,16 +94,17 @@
 
 
 
-<meta name="description" content="北方小站初养成">
+<meta name="description" content="AV.initialize(&quot;&quot;, &quot;&quot;); //需要写上leancloud的key    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);//表名   query.notEqualTo(&apos;id&apos;,0); //id不为0的结果   query.descending(&apos;time&apos;); //结果">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sunshinehit">
-<meta property="og:url" content="http://sunyueqing.com/archives/index.html">
+<meta property="og:url" content="http://sunyueqing.com/leancloud/index.html">
 <meta property="og:site_name" content="Sunshinehit">
-<meta property="og:description" content="北方小站初养成">
+<meta property="og:description" content="AV.initialize(&quot;&quot;, &quot;&quot;); //需要写上leancloud的key    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);//表名   query.notEqualTo(&apos;id&apos;,0); //id不为0的结果   query.descending(&apos;time&apos;); //结果">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-02T11:56:50.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sunshinehit">
-<meta name="twitter:description" content="北方小站初养成">
+<meta name="twitter:description" content="AV.initialize(&quot;&quot;, &quot;&quot;); //需要写上leancloud的key    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);//表名   query.notEqualTo(&apos;id&apos;,0); //id不为0的结果   query.descending(&apos;time&apos;); //结果">
 
 
 
@@ -132,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://sunyueqing.com/archives/"/>
+  <link rel="canonical" href="http://sunyueqing.com/leancloud/"/>
 
 
 
 
 
-  <title>Archiv | Sunshinehit</title>
+  <title> | Sunshinehit</title>
   
 
 
@@ -167,7 +168,7 @@
     
   
 
-  <div class="container sidebar-position-right  page-archive  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -291,111 +292,59 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Öhm..! Insgesamt 2 Artikel. Bleib dran.
-      </span>
+	<h1 class="post-title" itemprop="name headline"></h1>
+
+
+
+</header>
 
       
-
+      
+      
+      <div class="post-body">
         
         
+          <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("", "");</script> //需要写上leancloud的key
+<script type="text/javascript">
+  var time=0
+  var title=""
+  var url=""
+  var query = new AV.Query('Counter');//表名
+  query.notEqualTo('id',0); //id不为0的结果
+  query.descending('time'); //结果按阅读次数降序排序
+  query.limit(20);  //最终只返回10条结果
+  query.find().then(function (todo) {
+    for (var i=0;i<10;i++){ 
+      var result=todo[i].attributes;
+      time=result.time;  //阅读次数
+      title=result.title; //文章标题
+      url=result.url;     //文章url
+      var content="<p>"+"<font color='#0477ab'>"+"【阅读次数:"+time+"】"+"<a href='"+"http://thief.one"+url+"'>"+title+"</font>"+"</a>"+"</p>";
+      // document.write("<a href='"+"http://thief.one/"+url+"'>"+title+"</a>"+"    Readtimes:"+time+"<br>");
+      document.getElementById("heheda").innerHTML+=content
+    }
+  }, function (error) {
+    console.log("error");
+  });
+</script>
         
-
-        
-          
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/02/Mergesort/" itemprop="url">
-              
-                <span itemprop="name">Mergesort</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-02T15:53:53+08:00"
-              content="2017-09-02" >
-          09-02
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/02/Quicksort/" itemprop="url">
-              
-                <span itemprop="name">Quicksort</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-02T09:26:16+08:00"
-              content="2017-09-02" >
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
+      
     </div>
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -403,6 +352,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDYyOC83MTgz"></div>
+    
+  </div>
+
 
         </div>
         
@@ -695,12 +650,10 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
+  
 
   
 
@@ -729,6 +682,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
