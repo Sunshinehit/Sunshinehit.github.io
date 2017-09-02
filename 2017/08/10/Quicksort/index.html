@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Sunshinehit">
 <meta property="og:description" content="快排基本思想设当前待排序的无序区为 R[low..high]，利用分治法可将快速排序的基本思想描述为： 1.分解：在 R[low..high]中任选一个记录作为基准(Pivot)，以此基准将当前无序区划分为左、右两个较小的子区间 R[low..pivotpos-1)和 R[pivotpos+1..high]，并使左边子区间中所有记录的关键字均小于等于基准记录(不妨记为 pivot)的关键字 piv">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-02T07:26:42.806Z">
+<meta property="og:updated_time" content="2017-09-02T08:16:55.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quicksort">
 <meta name="twitter:description" content="快排基本思想设当前待排序的无序区为 R[low..high]，利用分治法可将快速排序的基本思想描述为： 1.分解：在 R[low..high]中任选一个记录作为基准(Pivot)，以此基准将当前无序区划分为左、右两个较小的子区间 R[low..pivotpos-1)和 R[pivotpos+1..high]，并使左边子区间中所有记录的关键字均小于等于基准记录(不妨记为 pivot)的关键字 piv">
@@ -371,9 +371,9 @@
         <h1 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h1><h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>设当前待排序的无序区为 R[low..high]，利用分治法可将快速排序的基本思想描述为：</p>
 <h3 id="1-分解："><a href="#1-分解：" class="headerlink" title="1.分解："></a>1.分解：</h3><p>在 R[low..high]中任选一个记录作为基准(Pivot)，以此基准将当前无序区划分为左、右两个较小的子区间 R[low..pivotpos-1)和 R[pivotpos+1..high]，并使左边子区间中所有记录的关键字均小于等于基准记录(不妨记为 pivot)的关键字 pivot.key，右边的子区间中所有记录的关键字均大于等于 pivot.key，而基准记录 pivot 则位于正确的位置(pivotpos)上，它无须参加后续的排序。</p>
 <p>注意： 划分的关键是要求出基准记录所在的位置 pivotpos。划分的结果可以简单地表示为(注意 pivot=R[pivotpos])： R[low..pivotpos-1].keys≤R[pivotpos].key≤R[pivotpos+1..high].keys 其中 low≤pivotpos≤high。</p>
-<h3 id="2-求解："><a href="#2-求解：" class="headerlink" title="2.求解："></a>2.求解：</h3><p>通过递归调用快速排序对左、右子区间 R[low..pivotpos-1]和R[pivotpos+1..high]快速排序。</p>
+<h3 id="2-求解："><a href="#2-求解：" class="headerlink" title="2.求解："></a>2.求解：</h3><p>通过递归调用快速排序对左、右子区间 R[low..pivotpos-1]和R[pivotpos+1..high]快速排序。<br><a id="more"></a></p>
 <h3 id="3-组合："><a href="#3-组合：" class="headerlink" title="3.组合："></a>3.组合：</h3><p>因为当”求解”步骤中的两个递归调用结束时，其左、右两个子区间已有序。对快速排序而言，”组合”步骤无须做什么，可看作是空操作。</p>
-<p>快速排序算法 QuickSort<br><a id="more"></a></p>
+<p>快速排序算法 QuickSort</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(SeqList R，<span class="keyword">int</span> low，<span class="keyword">int</span> high)</span></span></div><div class="line"><span class="function"> </span>&#123;                                 <span class="comment">//对R[low..high]快速排序  </span></div><div class="line">   <span class="keyword">int</span> pivotpos;                  <span class="comment">//划分后的基准记录的位置  </span></div><div class="line">   <span class="keyword">if</span>(low&lt;high)&#123;                  <span class="comment">//仅当区间长度大于1时才须排序  </span></div><div class="line">      pivotpos=Partition(R，low，high); <span class="comment">//对R[low..high]做划分  </span></div><div class="line">      QuickSort(R，low，pivotpos<span class="number">-1</span>); <span class="comment">//对左区间递归排序  </span></div><div class="line">      QuickSort(R，pivotpos+<span class="number">1</span>，high); <span class="comment">//对右区间递归排序  </span></div><div class="line">    &#125;</div><div class="line">  &#125; <span class="comment">//QuickSort</span></div></pre></td></tr></table></figure>
 <hr>
 <h2 id="划分算法-Partition"><a href="#划分算法-Partition" class="headerlink" title="划分算法 Partition"></a>划分算法 Partition</h2><p>简单的划分方法</p>
