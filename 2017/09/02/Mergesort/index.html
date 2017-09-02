@@ -83,8 +83,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Sunshinehit" type="application/atom+xml" />
 
@@ -98,18 +96,18 @@
 
 
 
-<meta name="description" content="归并排序归并排序（Merge sort）是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。 归并操作（merge）也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。">
+<meta name="description" content="归并排序归并排序（Merge sort）是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。 归并操作（merge）也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。 迭代法 申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后">
 <meta name="keywords" content="C&#x2F;C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mergesort">
 <meta property="og:url" content="http://sunyueqing.com/2017/09/02/Mergesort/index.html">
 <meta property="og:site_name" content="Sunshinehit">
-<meta property="og:description" content="归并排序归并排序（Merge sort）是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。 归并操作（merge）也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。">
+<meta property="og:description" content="归并排序归并排序（Merge sort）是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。 归并操作（merge）也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。 迭代法 申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-02T08:05:17.950Z">
+<meta property="og:updated_time" content="2017-09-02T08:08:09.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mergesort">
-<meta name="twitter:description" content="归并排序归并排序（Merge sort）是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。 归并操作（merge）也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。">
+<meta name="twitter:description" content="归并排序归并排序（Merge sort）是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。 归并操作（merge）也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。 迭代法 申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后">
 
 
 
@@ -220,7 +218,7 @@
         <li class="menu-item menu-item-about">
           <a href="/关于" rel="section">
             
-            About
+            A propos
           </a>
         </li>
       
@@ -308,7 +306,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-02T15:53:53+08:00">
                 2017-09-02
@@ -371,7 +369,7 @@
 
       
         <h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><p><strong>归并排序（Merge sort）</strong>是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。</p>
-<p><strong>归并操作（merge）</strong>也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。<br><a id="more"></a></p>
+<p><strong>归并操作（merge）</strong>也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。</p>
 <h2 id="迭代法"><a href="#迭代法" class="headerlink" title="迭代法"></a>迭代法</h2><ol>
 <li>申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列</li>
 <li>设定两个指针，最初位置分别为两个已经排序序列的起始位置</li>
@@ -379,7 +377,8 @@
 <li>重复步骤3直到某一指针到达序列尾</li>
 <li>将另一序列剩下的所有元素直接复制到合并序列尾</li>
 </ol>
-<h2 id="递归法"><a href="#递归法" class="headerlink" title="递归法"></a>递归法</h2><p>原理如下（假设序列共有n个元素）： </p>
+<h2 id="递归法"><a href="#递归法" class="headerlink" title="递归法"></a>递归法</h2><a id="more"></a>
+<p>原理如下（假设序列共有n个元素）： </p>
 <ol>
 <li>将序列每相邻两个数字进行归并操作，形成 floor(n/2)个序列，排序后每个序列包含两个元素</li>
 <li>将上述序列再次归并，形成 floor(n/4)个序列，每个序列包含四个元素 </li>
@@ -510,10 +509,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Table Des Matières
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Ensemble
           </li>
         </ul>
       
@@ -534,7 +533,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/归档">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">articles</span>
               </a>
             </div>
           
@@ -694,7 +693,7 @@
   <span class="post-meta-divider">|</span>
 
   <div class="theme-info">
-    Theme &mdash;
+    Thème &mdash;
     <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
       NexT.Pisces
     </a>
