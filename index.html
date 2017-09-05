@@ -225,7 +225,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -235,7 +235,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -245,7 +245,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            About
+            Über
           </a>
         </li>
       
@@ -255,7 +255,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -341,7 +341,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-03T22:29:07+08:00">
                 2017-09-03
@@ -362,7 +362,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -373,7 +373,7 @@
 
                 
                 
-                  , 
+                  . 
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -449,14 +449,13 @@
           <h1 id="最大子列和问题"><a href="#最大子列和问题" class="headerlink" title="最大子列和问题"></a>最大子列和问题</h1><blockquote>
 <p>之前学习刘汝佳老师的《算法竞赛》，在CSDN上写了一篇相似的文章，现在在学习浙大陈越老师的数据结构，再次回顾和补充，如有不当之处还请批评指正！</p>
 </blockquote>
-<p><strong> 最大子列和问题 </strong></p>
-<p>给出一个长度为n的序列A1,A2,……,An,要求找到1≤i≤j≤n,使得Ai+Ai+1+……+Aj尽量大。</p>
+<p><strong> 最大子列和问题 </strong><br>给出一个长度为n的序列A1,A2,……,An,要求找到1≤i≤j≤n,使得Ai+Ai+1+……+Aj尽量大。</p>
 <h2 id="算法1-枚举"><a href="#算法1-枚举" class="headerlink" title="算法1 : 枚举"></a>算法1 : 枚举</h2><p>使用枚举，程序如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">tot = <span class="number">0</span>;</div><div class="line">    best = A[<span class="number">1</span>]; <span class="comment">//初始最大值</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;= n; j++) &#123;  <span class="comment">//检查连续子序列A[i],……,A[j]</span></div><div class="line">            <span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = i; k &lt;= j; k++) &#123;</div><div class="line">                sum += A[k];       <span class="comment">//累加元素和</span></div><div class="line">                tot++;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (sum &gt; best)</div><div class="line">                best = sum;       <span class="comment">//更新最大值</span></div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
 <p>设输入规模为n时，加法操作的次数为T(n),则<br>$$<br>T(n)=\sum<em>{i=1}^n \sum</em>{j=i}^nj-i+1=\sum_{i=1}^n\frac{(n-i+1)(n-i+2)}{2}=\frac{n(n+1)(n+2)}{6}<br>$$<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/03/MaxSubseqSum/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -535,7 +534,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-02T15:53:53+08:00">
                 2017-09-02
@@ -556,7 +555,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -642,7 +641,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/02/Mergesort/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -721,7 +720,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-02T09:26:16+08:00">
                 2017-09-02
@@ -742,7 +741,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -822,7 +821,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/02/Quicksort/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -906,7 +905,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -917,7 +916,7 @@
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">categories</span>
+                <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
           
@@ -928,7 +927,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               </a>
             </div>
           
@@ -1051,7 +1050,7 @@
 
 
   <div class="powered-by">
-    Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+    Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
   </div>
 
   <span class="post-meta-divider">|</span>
