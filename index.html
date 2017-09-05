@@ -312,6 +312,200 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sunyueqing.com/2017/09/03/MaxSubseqSum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SYQ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/syq.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunshinehit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/03/MaxSubseqSum/" itemprop="url">MaxSubseqSum</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-03T22:29:07+08:00">
+                2017-09-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+                  . 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1,066
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="最大子列和问题"><a href="#最大子列和问题" class="headerlink" title="最大子列和问题"></a>最大子列和问题</h1><blockquote>
+<p>之前学习刘汝佳老师的《算法竞赛》，在CSDN上写了一篇相似的文章，现在在学习浙大陈越老师的数据结构，再次回顾和补充，如有不当之处还请批评指正！</p>
+</blockquote>
+<p><strong> 最大子列和问题 </strong><br>给出一个长度为n的序列A1,A2,……,An,要求找到1≤i≤j≤n,使得Ai+Ai+1+……+Aj尽量大。</p>
+<h2 id="算法1-枚举"><a href="#算法1-枚举" class="headerlink" title="算法1 : 枚举"></a>算法1 : 枚举</h2><p>使用枚举，程序如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">tot = <span class="number">0</span>;</div><div class="line">    best = A[<span class="number">1</span>]; <span class="comment">//初始最大值</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;= n; j++) &#123;  <span class="comment">//检查连续子序列A[i],……,A[j]</span></div><div class="line">            <span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = i; k &lt;= j; k++) &#123;</div><div class="line">                sum += A[k];       <span class="comment">//累加元素和</span></div><div class="line">                tot++;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (sum &gt; best)</div><div class="line">                best = sum;       <span class="comment">//更新最大值</span></div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<p>设输入规模为n时，加法操作的次数为T(n),则</p>
+<p>$$T(n)=\sum<em>{i=1}^n \sum</em>{j=i}^nj-i+1=\sum_{i=1}^n\frac{(n-i+1)(n-i+2)}{2}=\frac{n(n+1)(n+2)}{6}$$<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/03/MaxSubseqSum/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://sunyueqing.com/2017/09/02/Mergesort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -711,7 +905,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -722,7 +916,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">Kategorien</span>
               </a>
             </div>
