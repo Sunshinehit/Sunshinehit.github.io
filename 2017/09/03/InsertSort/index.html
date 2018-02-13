@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="C/C++," />
+  <meta name="keywords" content="C/C++,数据结构," />
 
 
 
@@ -96,18 +96,21 @@
 
 
 
-<meta name="description" content="归并排序归并排序（Merge sort）是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。 归并操作（merge）也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。 迭代法 申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后">
-<meta name="keywords" content="C&#x2F;C++">
+<meta name="description" content="插入排序插入排序是基于比较的排序。所谓的基于比较，就是通过比较数组中的元素，看谁大谁小，根据结果来调整元素的位置。因此，对于这类排序，就有两种基本的操作：①比较操作； ②交换操作 1.直接插入排序 基本思想：将一个记录插入到已排序好的有序表中，从而得到一个新的记录数增1的有序表 要点：设立哨兵作为临时存储和判断数组边界之用 稳定性：如果碰见一个和插入元素相等的，那么插入元素把想插入的元素放在相等元">
+<meta name="keywords" content="C&#x2F;C++,数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mergesort">
-<meta property="og:url" content="http://sunyueqing.com/2017/09/02/Mergesort/index.html">
+<meta property="og:title" content="MaxSubseqSum">
+<meta property="og:url" content="http://sunyueqing.com/2017/09/03/InsertSort/index.html">
 <meta property="og:site_name" content="Sunshinehit">
-<meta property="og:description" content="归并排序归并排序（Merge sort）是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。 归并操作（merge）也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。 迭代法 申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后">
+<meta property="og:description" content="插入排序插入排序是基于比较的排序。所谓的基于比较，就是通过比较数组中的元素，看谁大谁小，根据结果来调整元素的位置。因此，对于这类排序，就有两种基本的操作：①比较操作； ②交换操作 1.直接插入排序 基本思想：将一个记录插入到已排序好的有序表中，从而得到一个新的记录数增1的有序表 要点：设立哨兵作为临时存储和判断数组边界之用 稳定性：如果碰见一个和插入元素相等的，那么插入元素把想插入的元素放在相等元">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-02T12:42:36.833Z">
+<meta property="og:image" content="http://sunyueqing.com/2017/09/03/InsertSort/insertSort.jpg">
+<meta property="og:image" content="http://sunyueqing.com/2017/09/03/InsertSort/ShellSort.jpg">
+<meta property="og:updated_time" content="2018-02-13T02:38:28.631Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mergesort">
-<meta name="twitter:description" content="归并排序归并排序（Merge sort）是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。 归并操作（merge）也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。 迭代法 申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后">
+<meta name="twitter:title" content="MaxSubseqSum">
+<meta name="twitter:description" content="插入排序插入排序是基于比较的排序。所谓的基于比较，就是通过比较数组中的元素，看谁大谁小，根据结果来调整元素的位置。因此，对于这类排序，就有两种基本的操作：①比较操作； ②交换操作 1.直接插入排序 基本思想：将一个记录插入到已排序好的有序表中，从而得到一个新的记录数增1的有序表 要点：设立哨兵作为临时存储和判断数组边界之用 稳定性：如果碰见一个和插入元素相等的，那么插入元素把想插入的元素放在相等元">
+<meta name="twitter:image" content="http://sunyueqing.com/2017/09/03/InsertSort/insertSort.jpg">
 
 
 
@@ -136,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="http://sunyueqing.com/2017/09/02/Mergesort/"/>
+  <link rel="canonical" href="http://sunyueqing.com/2017/09/03/InsertSort/"/>
 
 
 
@@ -157,7 +160,7 @@
         border-left-color: #1E92FB;    /*左边框颜色*/
     }
 </style>
-  <title>Mergesort | Sunshinehit</title>
+  <title>MaxSubseqSum | Sunshinehit</title>
   
 
 
@@ -314,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sunyueqing.com/2017/09/02/Mergesort/">
+    <link itemprop="mainEntityOfPage" href="http://sunyueqing.com/2017/09/03/InsertSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SYQ">
@@ -331,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mergesort</h1>
+          <h1 class="post-title" itemprop="name headline">MaxSubseqSum</h1>
         
 
         <div class="post-meta">
@@ -343,8 +346,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-02T15:53:53+08:00">
-                2017-09-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-03T22:29:07+08:00">
+                2017-09-03
               </time>
             
 
@@ -368,6 +371,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/算法/" itemprop="url" rel="index">
                     <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+                  . 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -402,7 +416,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  872
+                  839
                 </span>
               
 
@@ -418,7 +432,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  3
                 </span>
               
             </div>
@@ -439,31 +453,20 @@
       
 
       
-        <h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><p><strong>归并排序（Merge sort）</strong>是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用，且各层分治递归可以同时进行。</p>
-<p><strong>归并操作（merge）</strong>也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。</p>
-<h2 id="迭代法"><a href="#迭代法" class="headerlink" title="迭代法"></a>迭代法</h2><ol>
-<li>申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列</li>
-<li>设定两个指针，最初位置分别为两个已经排序序列的起始位置</li>
-<li>比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置</li>
-<li>重复步骤3直到某一指针到达序列尾</li>
-<li>将另一序列剩下的所有元素直接复制到合并序列尾</li>
-</ol>
-<h2 id="递归法"><a href="#递归法" class="headerlink" title="递归法"></a>递归法</h2><a id="more"></a>
-<p>原理如下（假设序列共有n个元素）： </p>
-<ol>
-<li>将序列每相邻两个数字进行归并操作，形成 floor(n/2)个序列，排序后每个序列包含两个元素</li>
-<li>将上述序列再次归并，形成 floor(n/4)个序列，每个序列包含四个元素 </li>
-<li>重复步骤2，直到所有元素排序完毕</li>
-</ol>
-<h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2><p><strong>（自顶而下的递归+迭代）</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge_sort</span><span class="params">(<span class="keyword">int</span> *A, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> *T)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (y - x &gt; <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">int</span> m = x + (y - x) / <span class="number">2</span>;      <span class="comment">//划分</span></div><div class="line">        <span class="keyword">int</span> p = x, q = m, i = x;</div><div class="line">        merge_sort(A, x, m, T);       <span class="comment">//递归求解</span></div><div class="line">        merge_sort(A, m, y, T);       <span class="comment">//递归求解</span></div><div class="line">        <span class="keyword">while</span> (p &lt; m || q &lt; y) &#123;</div><div class="line">            <span class="keyword">if</span> (q &gt;= y || (p &lt; m &amp;&amp; A[p] &lt;= A[q]))</div><div class="line">                T[i++] = A[p++];            <span class="comment">//从左半数组复制到临时空间</span></div><div class="line">            <span class="keyword">else</span> &#123;</div><div class="line">                T[i++] = A[q++];            <span class="comment">//从右半数组复制到临时空间</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (i = x; i &lt; y; i++)</div><div class="line">            A[i] = T[i];                    <span class="comment">//从辅助空间复制回A数组</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="利用归并排序解决逆序对问题"><a href="#利用归并排序解决逆序对问题" class="headerlink" title="利用归并排序解决逆序对问题"></a>利用归并排序解决逆序对问题</h1><p><strong> 给一列数a1,a2,…,an，求它的逆序对数，即有多少个有序对(i,j）,i<j 但ai="">aj。n可以高达106。 </j></strong></p>
-<ol>
-<li>划分问题：将原序列分解成尽可能长度相等的两个子序列</li>
-<li>递归过程：统计左子序列和右子序列的逆序对</li>
-<li>合并问题：统计左右子序列合并后的逆序对<br>每当左右子序列合并的时候，可以发现如果右子序列的元素i放入临时容器中，那么左子序列中当前元素j到末尾的元素全部都是大于i的，由此就可以得到cnt+=m-p这样的一个表达式。</li>
-</ol>
-<p><strong> C++实现 </strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1000000</span>;</div><div class="line"><span class="keyword">int</span> A[maxn], T[maxn];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">merge_sort</span><span class="params">(<span class="keyword">int</span> *A, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> *T)</span></span>;</div><div class="line"><span class="keyword">int</span> cnt=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;A[i]);</div><div class="line">    &#125;</div><div class="line">    merge_sort(A, <span class="number">0</span>, n, T);</div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"逆序对:"</span> &lt;&lt; cnt &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, A[i]);                  <span class="comment">//排序后</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">merge_sort</span><span class="params">(<span class="keyword">int</span> *A, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> *T)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (y - x &gt; <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">int</span> m = x + (y - x) / <span class="number">2</span>;      <span class="comment">//划分</span></div><div class="line">        <span class="keyword">int</span> p = x, q = m, i = x;</div><div class="line">        merge_sort(A, x, m, T);       <span class="comment">//递归求解</span></div><div class="line">        merge_sort(A, m, y, T);       <span class="comment">//递归求解</span></div><div class="line">        <span class="keyword">while</span> (p &lt; m || q &lt; y) &#123;</div><div class="line">            <span class="keyword">if</span> (q &gt;= y || (p &lt; m &amp;&amp; A[p] &lt;= A[q]))</div><div class="line">                T[i++] = A[p++];            <span class="comment">//从左半数组复制到临时空间</span></div><div class="line">            <span class="keyword">else</span> &#123;</div><div class="line">                T[i++] = A[q++];            <span class="comment">//从右半数组复制到临时空间</span></div><div class="line">                cnt+=m-p;                   <span class="comment">//计算逆序数</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (i = x; i &lt; y; i++)</div><div class="line">            A[i] = T[i];                    <span class="comment">//从辅助空间复制回A数组</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>插入排序是基于比较的排序。所谓的基于比较，就是通过比较数组中的元素，看谁大谁小，根据结果来调整元素的位置。<br>因此，对于这类排序，就有两种基本的操作：①比较操作； ②交换操作</p>
+<h2 id="1-直接插入排序"><a href="#1-直接插入排序" class="headerlink" title="1.直接插入排序"></a>1.直接插入排序</h2><ul>
+<li>基本思想：<br>将一个记录插入到已排序好的有序表中，从而得到一个新的记录数增1的有序表</li>
+<li>要点：设立哨兵作为临时存储和判断数组边界之用</li>
+<li>稳定性：如果碰见一个和插入元素相等的，那么插入元素把想插入的元素放在相等元素的后面。所以，相等元素的前后顺序没有改变，从原无序序列出去的顺序就是排好序后的顺序，所以插入排序是稳定的。<br><img src="insertSort.jpg" alt="Alt text"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;arr.length;i++)&#123;</div><div class="line">	<span class="keyword">if</span>(arr[i]&lt;arr[i<span class="number">-1</span>])&#123; <span class="comment">//[0...i-1]都已排序好</span></div><div class="line">		<span class="keyword">int</span> temp=arr[i];</div><div class="line">		<span class="keyword">int</span> j;</div><div class="line">        <span class="keyword">for</span>(j=i;j&gt;<span class="number">0</span>&amp;&amp;arr[j]&gt;temp;j--)&#123; <span class="comment">//注意边界</span></div><div class="line">        	arr[j+<span class="number">1</span>]=arr[j];</div><div class="line">        &#125;</div><div class="line">        arr[j]=temp;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>;j&lt;arr.length;j++)&#123;</div><div class="line">	<span class="keyword">do</span>&#123;</div><div class="line">    	<span class="keyword">int</span> key=arr[j];</div><div class="line">        i=j<span class="number">-1</span>;</div><div class="line">        <span class="keyword">while</span>(i&gt;<span class="number">0</span>&amp;&amp;arr[i]&gt;key)&#123;</div><div class="line">        	<span class="keyword">do</span>&#123;</div><div class="line">            	arr[i+<span class="number">1</span>]=arr[i];</div><div class="line">                i=i<span class="number">-1</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        A[i+<span class="number">1</span>]=key;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i= <span class="number">1</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(a[i] &lt; a[i<span class="number">-1</span>])&#123;<span class="comment">//若第i个元素大于i-1元素，直接插入。小于的话，移动有序表后插入</span></div><div class="line">            <span class="keyword">int</span> j= i<span class="number">-1</span>;</div><div class="line">            <span class="keyword">int</span> x = a[i];   <span class="comment">//复制为哨兵，即存储待排序元素</span></div><div class="line">            a[i] = a[i<span class="number">-1</span>];     <span class="comment">//先后移一个元素</span></div><div class="line">            <span class="keyword">while</span>(x &lt; a[j])&#123;  <span class="comment">//查找在有序表的插入位置</span></div><div class="line">                a[j+<span class="number">1</span>] = a[j];</div><div class="line">                j--;         <span class="comment">//元素后移</span></div><div class="line">            &#125;</div><div class="line">            a[j+<span class="number">1</span>] = x;      <span class="comment">//插入到正确位置</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><ul>
+<li>思想：<br>先将要排序的一组记录按某个增量d（n/2,n为要排序数的个数）分成若干组子序列，每组中记录的下标相差d.对每组中全部元素进行直接插入排序，然后再用一个较小的增量（d/2）对它进行分组，在每组中再进行直接插入排序。继续不断缩小增量直至为1，最后使用直接插入排序完成排序。</li>
+<li>不稳定：<br>希尔排序时效分析很难，关键码的比较次数与记录移动次数依赖于增量因子序列d的选取，特定情况下可以准确估算出关键码的比较次数和记录的移动次数。目前还没有人给出选取最好的增量因子序列的方法。增量因子序列可以有各种取法，有取奇数的，也有取质数的，但需要注意：增量因子中除1 外没有公因子，且最后一个增量因子必须为1。希尔排序方法是一个不稳定的排序方法。<br><img src="ShellSort.jpg" alt="Alt text"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/** </span></div><div class="line"><span class="comment"> * 直接插入排序的一般形式 </span></div><div class="line"><span class="comment"> * </span></div><div class="line"><span class="comment"> * @param int dk 缩小增量，如果是直接插入排序，dk=1 </span></div><div class="line"><span class="comment"> * </span></div><div class="line"><span class="comment"> */</span>  </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShellInsertSort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> n,<span class="keyword">int</span> dk)</span></span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=dk;i&lt;n;++i)&#123;</div><div class="line">    	<span class="keyword">if</span>(a[i]&lt;a[i-dk])&#123;</div><div class="line">        	<span class="keyword">int</span> j=i-dk;</div><div class="line">            <span class="keyword">int</span> x=a[i];</div><div class="line">            a[i]=a[i-dk];</div><div class="line">            <span class="keyword">while</span>(x&lt;a[j])&#123;</div><div class="line">            	a[j+dk]=a[j];</div><div class="line">                j-=dk;</div><div class="line">            &#125;</div><div class="line">            a[j+dk]=x;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">/** </span></div><div class="line"><span class="comment"> * 先按增量d（n/2,n为要排序数的个数进行希尔排序 </span></div><div class="line"><span class="comment"> * </span></div><div class="line"><span class="comment"> */</span>  </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">shellSort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> dk=n/<span class="number">2</span>;</div><div class="line">    <span class="keyword">while</span>(dk&gt;=<span class="number">1</span>)&#123;</div><div class="line">    	ShellInsertSort(a,n,dk);</div><div class="line">        dk=dk/<span class="number">2</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -507,6 +510,8 @@
           
             <a href="/tags/C-C/" rel="tag"><i class="fa fa-tag"></i> C/C++</a>
           
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          
         </div>
       
 
@@ -518,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/02/Quicksort/" rel="next" title="Quicksort">
-                <i class="fa fa-chevron-left"></i> Quicksort
+              <a href="/2017/09/03/MaxSubseqSum/" rel="next" title="MaxSubseqSum">
+                <i class="fa fa-chevron-left"></i> MaxSubseqSum
               </a>
             
           </div>
@@ -528,8 +533,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/03/MaxSubseqSum/" rel="prev" title="MaxSubseqSum">
-                MaxSubseqSum <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/07/Linux与windows双系统/" rel="prev" title="Linux与windows双系统">
+                Linux与windows双系统 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -737,7 +742,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#归并排序"><span class="nav-number">1.</span> <span class="nav-text">归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代法"><span class="nav-number">1.1.</span> <span class="nav-text">迭代法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归法"><span class="nav-number">1.2.</span> <span class="nav-text">递归法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现"><span class="nav-number">1.3.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用归并排序解决逆序对问题"><span class="nav-number">2.</span> <span class="nav-text">利用归并排序解决逆序对问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#插入排序"><span class="nav-number">1.</span> <span class="nav-text">插入排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-直接插入排序"><span class="nav-number">1.1.</span> <span class="nav-text">1.直接插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希尔排序"><span class="nav-number">1.2.</span> <span class="nav-text">希尔排序</span></a></li></ol></li></ol></div>
             
 
           </div>
